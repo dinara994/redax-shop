@@ -31,8 +31,8 @@ const Home = () => {
     // ]
     const dispatch = useDispatch() //отправил данные
     const catalog = useSelector(store => store.catalog) //store принимаемпо любому имени, => catalog - название ключа должно соотвес-ть назв-ю в зран-ще внутри
-    const isLoading = useSelector(store => store.isLoading) //store принимаемпо любому имени, => catalog - название ключа должно соотвес-ть назв-ю в зран-ще внутри
-    // useSelector всегда принимает collBack  получает весь наш store
+    const isLoading = useSelector(store => store.isLoading) // useSelector всегда принимает collBack  получает весь наш store
+
     useEffect(() => {
         dispatch(getCatalog()) //dispatch - создает новый action и отпр-ет данные в reducer.
         // этот обьект поподает в функцию reducer => по имени action [] => action.type => GET_CATALOG,  action.payload => data [{}, {}]
